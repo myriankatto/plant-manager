@@ -66,8 +66,12 @@ export function UserIdentification() {
                 onFocus={handleInputFocus}
                 onChangeText={handleInputChange}
               />
-              <View style={styles.footer}>
-                <Button title="Confirmar" onPress={handleSubmit} />
+              <View style={isFilled ? styles.footer : styles.disabled}>
+                <Button
+                  title="Confirmar"
+                  onPress={handleSubmit}
+                  disabled={isFilled ? false : true}
+                />
               </View>
             </View>
           </View>
@@ -113,5 +117,11 @@ const styles = StyleSheet.create({
     marginTop: 40,
     width: '100%',
     paddingHorizontal: 20,
+  },
+  disabled: {
+    marginTop: 40,
+    width: '100%',
+    paddingHorizontal: 20,
+    opacity: 0.4,
   },
 });
