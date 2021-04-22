@@ -6,13 +6,16 @@ import colors from '../styles/colors';
 import fonts from '../styles/fonts';
 
 interface PlantProps extends RectButtonProps {
-  data: { name: string; photo: string };
+  data: {
+    name: string;
+    photo: string;
+  };
 }
 
 export const PlantCardPrimary = ({ data, ...rest }: PlantProps) => {
   return (
-    <RectButton style={styles.container}>
-      <SvgFromUri uri={data.photo} width={70} height={70}/>
+    <RectButton style={styles.container} {...rest}>
+      <SvgFromUri uri={data.photo} width={70} height={70} />
       <Text style={styles.text}>{data.name}</Text>
     </RectButton>
   );

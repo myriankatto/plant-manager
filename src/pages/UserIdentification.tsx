@@ -8,10 +8,12 @@ import {
   KeyboardAvoidingView,
   TouchableWithoutFeedback,
   Platform,
+  Alert,
   Keyboard,
 } from 'react-native';
 
 import { useNavigation } from '@react-navigation/core';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { Button } from '../components/Button';
 
@@ -39,8 +41,21 @@ export function UserIdentification() {
     setName(value);
   }
 
-  function handleSubmit() {
-    navigation.navigate('Confirmation');
+  async function handleSubmit() {
+    if (!name) return Alert.alert('Please type your name! 🍃 ');
+    try {
+      await AsyncStorage.setItem('@plantmanager:user', name);
+      navigation.navigate('Confirmation', {
+        title: 'Success 🎉',
+        subtitle: `Let's start taking care of your plants!
+Find your plants and create alerts.`,
+        buttonTitle: "Let's start",
+        icon: 'tree',
+        nextScreen: 'PlantSelect',
+      });
+    } catch {
+      Alert.alert('Não foi possível salvar o seu nome. 😰');
+    }
   }
 
   return (
@@ -66,12 +81,8 @@ export function UserIdentification() {
                 onFocus={handleInputFocus}
                 onChangeText={handleInputChange}
               />
-              <View style={isFilled ? styles.footer : styles.disabled}>
-                <Button
-                  title="Confirmar"
-                  onPress={handleSubmit}
-                  disabled={isFilled ? false : true}
-                />
+              <View style={styles.footer}>
+                <Button title="Confirmar" onPress={handleSubmit} />
               </View>
             </View>
           </View>
@@ -117,11 +128,5 @@ const styles = StyleSheet.create({
     marginTop: 40,
     width: '100%',
     paddingHorizontal: 20,
-  },
-  disabled: {
-    marginTop: 40,
-    width: '100%',
-    paddingHorizontal: 20,
-    opacity: 0.4,
   },
 });
