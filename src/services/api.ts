@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://my-json-server.typicode.com/myriankatto/plant-manager',
+  baseURL: 'https://planteria-server.herokuapp.com',
 });
 
 export default api;
