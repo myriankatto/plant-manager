@@ -1,0 +1,354 @@
+{
+  "plants_water_frequencies": [
+    { "key": "day", "title": "Every Day" },
+    { "key": "week", "title": "Per week" }
+  ],
+
+  "plants_environments": [
+    { "key": "living_room", "title": "Living" },
+    { "key": "bedroom", "title": "Bedroom" },
+    { "key": "kitchen", "title": "Kitchen" },
+    { "key": "bathroom", "title": "Bathroom" }
+  ],
+
+  "plants": [
+    {
+      "id": 1,
+      "name": "Alocasia",
+      "about": "Arrow-shaped leaves, large ribs in white and silver over the intense and shiny metallic green.",
+      "water_tips": "Watering twice a week is usually enough. It loves the humidity of the air. Therefore, spray water on its leaves frequently.",
+      "light_tips": "It preferes airy places, which receive abundant light, but indirectly, and without the presence of drafty. The full sun can burn your leaves",
+      "photo": "https://svgshare.com/i/X2v.svg",
+      "environments": ["living_room", "bedroom"],
+      "frequency": {
+        "times": 2,
+        "repeat_every": "week"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Aloe Vera",
+      "about": "Aloe vera is an easy, attractive and useful plant. Their leaves can be used to relieve pain from scrapes and burns when applied topically.",
+      "water_tips": "Water aloe vera plants deeply, but infrequently. Once a week is enough.",
+      "light_tips": "Place in bright, indirect sunlight or artificial light. Aloe that are kept in low light often grow leggy.",
+      "photo": "https://svgshare.com/i/X35.svg",
+      "environments": ["living_room", "bedroom", "kitchen"],
+      "frequency": {
+        "times": 1,
+        "repeat_every": "week"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Aningapara",
+      "about": "Its foliage is very ornamental, composed of large and shiny leaves, with streaky spots. It is a very toxic plant.",
+      "water_tips": "Regular watering is recommended to keep the soil moist, without soaking. Water twice a week.",
+      "light_tips": "Adapts well to half-shade or diffused light, making it a great plant to have indoors.",
+      "photo": "https://svgshare.com/i/X3A.svg",
+      "environments": ["living_room", "bedroom"],
+      "frequency": {
+        "times": 2,
+        "repeat_every": "week"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Areca",
+      "about": "Areca is one of the most popular palm trees. In natural conditions, it can reach up to 9 meters.",
+      "water_tips": "Native to tropical forests, she likes humidity. Keep an eye out just to keep it from getting soaked, a condition in which it becomes an easy target for pests.",
+      "light_tips": "Half shade, full sun.",
+      "photo": "https://svgshare.com/i/X38.svg",
+      "environments": ["living_room", "bathroom"],
+      "frequency": {
+        "times": 2,
+        "repeat_every": "week"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Bamboo",
+      "about": "Luck, prosperity, togetherness. On land or in water, this plant brings the oriental tradition of harmonizing environments and good fluids. Very resistant and flexible.",
+      "water_tips": "Water three times per week. Give preference to the soft earth, keeping it always moist.",
+      "light_tips": "Half-shade. A corner with natural light away from the window, 3m away is enough for it to grow full of life.",
+      "photo": "https://svgshare.com/i/X3S.svg",
+      "environments": ["living_room", "bedroom", "bathroom"],
+      "frequency": {
+        "times": 3,
+        "repeat_every": "week"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Basil",
+      "about": "Having a basil plant at home lets you enjoy all the freshness of a seasoned harvest and does not require much space for cultivation.",
+      "water_tips": "Keep the soil always moist, never soaked. Water it 3 times per week.",
+      "light_tips": "Full sun. If the corner chosen for your plant receives the strong midday sun, 3 hours of exposure is usually enough.",
+      "photo": "https://svgshare.com/i/X2i.svg",
+      "environments": ["kitchen"],
+      "frequency": {
+        "times": 3,
+        "repeat_every": "week"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Strelitzia",
+      "about": "Perennial herbaceous plant, produces flowers almost the whole year.",
+      "water_tips": "It likes water, but not soaked soil. Water twice a week.",
+      "light_tips": "It likes a lot of light, it should preferably be grown in full sun.",
+      "photo": "https://svgshare.com/i/X3c.svg",
+      "environments": ["living_room", "bedroom"],
+      "frequency": {
+        "times": 2,
+        "repeat_every": "week"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Bromelia",
+      "about": "It's a type of tropical vegetation. It is known for the grouping of its rosette-shaped leaves and for its exotic look, full of colors.",
+      "water_tips": "Water twice a week. This species can withstand short periods of drought.",
+      "light_tips": "Half-shade. Enjoy the morning sun, before 10am, or the end of the day, after 4pm, so as not to burn the foliage.",
+      "photo": "https://svgshare.com/i/X2a.svg",
+      "environments": ["living_room"],
+      "frequency": {
+        "times": 2,
+        "repeat_every": "week"
+      }
+    },
+    {
+      "id": 9,
+      "name": "Cactus",
+      "about": "They survive in hot or arid places by accumulating water in their tissues",
+      "water_tips": "Once a week, in full sun, or every 10 days, in half-shade. Bet on the mixture of soil and sand to prevent rotting of the roots.",
+      "light_tips": "Full sun. This plant is also able to adapt to half-shade, although it will not offer its colorful exuberance.",
+      "photo": "https://svgshare.com/i/X39.svg",
+      "environments": ["living_room"],
+      "frequency": {
+        "times": 1,
+        "repeat_every": "week"
+      }
+    },
+    {
+      "id": 10,
+      "name": "Coriander",
+      "about": "Coriander is originally from Asia and the Mediterranean. It's widely used in oriental and brazilian cuisine and in the preparation of fish and seafood.",
+      "water_tips": "Coriander likes slightly moistened soil, never dry or soaked. Water it 3 time per week.",
+      "light_tips": "In addition to enjoying the warmth, the coriander needs to be in direct sunlight for at least 4 hours a day.",
+      "photo": "https://svgshare.com/i/X3o.svg",
+      "environments": ["kitchen"],
+      "frequency": {
+        "times": 3,
+        "repeat_every": "week"
+      }
+    },
+    {
+      "id": 11,
+      "name": "Ficus",
+      "about": "Native to West Africa, it is a species that in nature can begin life as an epiphyte, growing on other trees. But it can also be used as an ornamental plant indoors.",
+      "water_tips": "Water regularly - three times a week should be enough - in an abundant way and let the water drain through the entire pot so as not to rot the root.",
+      "light_tips": "It likes humid environments with a lot of light, but without direct sunlight - except in cases where the sprouting happened in direct sunlight and his plant is already rusting.",
+      "photo": "https://svgshare.com/i/X3T.svg",
+      "environments": ["living_room", "bedroom"],
+      "frequency": {
+        "times": 3,
+        "repeat_every": "week"
+      }
+    },
+    {
+      "id": 12,
+      "name": "Philodendron",
+      "about": "Brazilian from the Atlantic Forest, the Philodendron owns leaves that appear to have been cut by hand.",
+      "water_tips": "2x a week. Keep the soil always moist, without soaking.",
+      "light_tips": "Full sun or half shade.",
+      "photo": "https://svgshare.com/i/X3y.svg",
+      "environments": ["living_room", "bedroom"],
+      "frequency": {
+        "times": 2,
+        "repeat_every": "week"
+      }
+    },
+    {
+      "id": 13,
+      "name": "Epipremnum",
+      "about": "Originally from the Solomon Islands, it has large, thick leaves and white or yellow spots when grown up. This plants filters impurities from the air.",
+      "water_tips": "Water 2 times a week, always remembering to check the soil before watering it again.",
+      "light_tips": "Half-shade and diffused light.",
+      "photo": "https://svgshare.com/i/X49.svg",
+      "environments": ["living_room", "bedroom"],
+      "frequency": {
+        "times": 2,
+        "repeat_every": "week"
+      }
+    },
+    {
+      "id": 14,
+      "name": "Lavander",
+      "about": "Typical of the region from southern Europe to northern Africa, Arabia and the Canary Islands. Lavender is a plant with very fragrant flowers and can be used in many ways.",
+      "water_tips": "Water once a week. ",
+      "light_tips": "Lavender loves the sun! So choose the sunniest place possible.",
+      "photo": "https://svgshare.com/i/X2x.svg",
+      "environments": ["bathroom", "living_room"],
+      "frequency": {
+        "times": 1,
+        "repeat_every": "week"
+      }
+    },
+    {
+      "id": 15,
+      "name": "Mint",
+      "about": "Mint is a perennial with very fragrant, toothed leaves and tiny purple, pink, or white flowers. It has a fruity, aromatic taste.",
+      "water_tips": "Water it 3 times per week to keep the soil evenly moist.",
+      "light_tips": " Mint performs its best in full sun, as long as the soil is kept moist, but it also thrives in partial shade.",
+      "photo": "https://svgshare.com/i/X2j.svg",
+      "environments": ["kitchen"],
+      "frequency": {
+        "times": 3,
+        "repeat_every": "week"
+      }
+    },
+    {
+      "id": 16,
+      "name": "Monstera",
+      "about": "Old known from Central America, where it originated, this species reached other parts of the world in the early 20th century.",
+      "water_tips": "3x per week. Keep the soil moist, never soaked.",
+      "light_tips": "Half shade or diffused light. Always protected from direct sunlight.",
+      "photo": "https://svgshare.com/i/X27.svg",
+      "environments": ["living_room", "bedroom", "bathroom"],
+      "frequency": {
+        "times": 3,
+        "repeat_every": "week"
+      }
+    },
+    {
+      "id": 17,
+      "name": "Musa",
+      "about": "The Musa, also known as the banana tree, is native to Southeast Asia and Australia.  Nowadays, however, the plant is grown in many tropical countries.",
+      "water_tips": "The Musa itself already consists of 80% water and also needs a lot of water. Water 3  times a week.",
+      "light_tips": "The banana plant loves a lot of sunlight and is therefore also grown under filtered light.",
+      "photo": "https://svgshare.com/i/X3z.svg",
+      "environments": ["living_room"],
+      "frequency": {
+        "times": 3,
+        "repeat_every": "week"
+      }
+    },
+    {
+      "id": 18,
+      "name": "Parsley",
+      "about": "Parsley is a very commonly grown herb, used mainly as a garnish and to make delicious parsley sauce. But it is also an excellent ingredient for flavouring savoury dishes, making flavoured butter and stuffings and is very rich in vitamin C.",
+      "water_tips": "Parsley will need watering about 3 times per week. If it runs out of water, it will let you know by wilting.",
+      "light_tips": "It grows best in a sunny and they needs to receive six to eight hours of direct sunlight every day.",
+      "photo": "https://svgshare.com/i/X2y.svg",
+      "environments": ["kitchen"],
+      "frequency": {
+        "times": 3,
+        "repeat_every": "week"
+      }
+    },
+    {
+      "id": 19,
+      "name": "Peperomia",
+      "about": "Belonging to the species of the Piperaceae family, it is perfect for those who like hanging plants. Has a beautiful light green heart-shaped leaves and whitish spots on the edges.",
+      "water_tips": "Watering can once a week, taking care not to soak the substrate. This can rot your roots.",
+      "light_tips": "It's recommend growing it in environments in half-shade or diffused light, since the direct sun can burn its leaves. It is also sensitive to frost.",
+      "photo": "https://svgshare.com/i/X3B.svg",
+      "environments": ["living_room", "bedroom"],
+      "frequency": {
+        "times": 1,
+        "repeat_every": "week"
+      }
+    },
+    {
+      "id": 20,
+      "name": "Sedum",
+      "about": "This succulent is a herbaceous native from Mexico whose main characteristic is the hanging branches.",
+      "water_tips": "1x per week. Unlike other succulents, which tend to be watered more frequently and in a smaller volume.",
+      "light_tips": "Half shade or full sun. Leave your plant in a place that receives sun for at least 2 hours a day.",
+      "photo": "https://svgshare.com/i/X4A.svg",
+      "environments": ["living_room"],
+      "frequency": {
+        "times": 1,
+        "repeat_every": "week"
+      }
+    },
+    {
+      "id": 21,
+      "name": "Rosemary",
+      "about": "Rosemary is one of those wonderful herbs that makes a beautiful ornamental plant as well as a versatile culinary seasoning.",
+      "water_tips": "Water once a week. Be careful not to over-water and avoid making the soil soggy.",
+      "light_tips": "Give it six to eight hours of full sunlight each day.",
+      "photo": "https://svgshare.com/i/X3H.svg",
+      "environments": ["kitchen"],
+      "frequency": {
+        "times": 1,
+        "repeat_every": "week"
+      }
+    },
+    {
+      "id": 22,
+      "name": "Fern",
+      "about": "It is one of the oldest plants in the world. As they do not produce seeds, their reproduction happens through spore.",
+      "water_tips": "The fern likes a lot of moisture, both in the leaves and in the soil.",
+      "light_tips": "Indirect light. Full sun can burn the leaves.",
+      "photo": "https://svgshare.com/i/X3e.svg",
+      "environments": ["living_room", "bedroom"],
+      "frequency": {
+        "times": 1,
+        "repeat_every": "day"
+      }
+    },
+    {
+      "id": 23,
+      "name": "Sansevieria",
+      "about": "It is used in many homes as a spiritual protector: some say that it is capable of cutting off negative energy and still scaring away evil spirits.",
+      "water_tips": "It is a species that can withstand periods of drought. Prefer to sin by the lack and not by the excess of water. In general, watering once a week is enough.",
+      "light_tips": "It adapts both in diffused light and in direct sunlight. The difference is in growth: the more sun, the faster it will develop.",
+      "photo": "https://svgshare.com/i/X3q.svg",
+      "environments": ["living_room"],
+      "frequency": {
+        "times": 1,
+        "repeat_every": "week"
+      }
+    },
+    {
+      "id": 24,
+      "name": "Sunflower",
+      "about": "The sunflower originates from North and South America, but also does very well in Europe and other temperate regions. A sunflower seed turns into a fabulous yellow sunflower in just a few months.",
+      "water_tips": "The plant needs a lot of water. The soil should always be a bit damp.",
+      "light_tips": "As the name suggests, the sunflower loves sunshine and can tolerate a lot of light.",
+      "photo": "https://svgshare.com/i/X2z.svg",
+      "environments": ["living_room", "kitchen", "bedroom"],
+      "frequency": {
+        "times": 1,
+        "repeat_every": "day"
+      }
+    },
+    {
+      "id": 25,
+      "name": "Yucca",
+      "about": "Showing off its sword-like foliage on a broad cane, this plant makes a bold statement. The Yucca plant is a native of Guatemala and southeast Mexico.",
+      "water_tips": "Yucca is a drought-tolerant plant and does not require much water. Once a week is enough.",
+      "light_tips": "Will do best in bright indirect light. If the Yucca is exposed to direct light, the leaves may burn. It can tolerate lower light areas but will grow much slower.",
+      "photo": "https://svgshare.com/i/X4h.svg",
+      "environments": ["living_room"],
+      "frequency": {
+        "times": 1,
+        "repeat_every": "week"
+      }
+    },
+    {
+      "id": 26,
+      "name": "Zamioculca",
+      "about": "Originally from the African continent, zamioculca curiously manages to survive very well in little favorable conditions, with scarce water and light.",
+      "water_tips": "Watering once a week is enough. Because it has a succulent root, similar to a potato, it can store a lot of water and, consequently, withstand dry periods well.",
+      "light_tips": "Likes half-shade or diffused light and does not tolerate direct sunlight.",
+      "photo": "https://svgshare.com/i/X3f.svg",
+      "environments": ["living_room"],
+      "frequency": {
+        "times": 1,
+        "repeat_every": "week"
+      }
+    }
+  ]
+}
