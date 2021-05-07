@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { StyleSheet, View, Image, Text, FlatList, Alert } from 'react-native';
 import { loadPlant, PlantProps, removePlant } from '../libs/storage';
 import { formatDistance } from 'date-fns';
-import { pt } from 'date-fns/locale';
+import { enUS } from 'date-fns/locale';
 
 import waterdrop from '../assets/waterdrop.png';
 import { PlantCardSecondary } from '../components/PlantCardSecondary';
@@ -18,16 +18,16 @@ export function MyPlants() {
   const [nextWatered, setNextWatered] = useState<string>();
 
   function handleRemove(plant: PlantProps) {
-    Alert.alert('Remover', `Deseja remover a ${plant.name}?`, [
-      { text: 'Não 🙏', style: 'cancel' },
+    Alert.alert('Remover', `Do you want to remove ${plant.name}?`, [
+      { text: 'No 🙏', style: 'cancel' },
       {
-        text: 'Sim 😿',
+        text: 'Yes 😿',
         onPress: async () => {
           try {
             await removePlant(plant.id);
             setMyPlants((oldData) => oldData.filter((item) => item.id !== plant.id));
           } catch (error) {
-            Alert.alert('Não foi possível remover! 😿');
+            Alert.alert('Something went wrong, try again 😿');
           }
         },
       },
@@ -42,11 +42,11 @@ export function MyPlants() {
         new Date(plantsStoraged[0].dateTimeNotification).getTime(),
         new Date().getTime(),
         {
-          locale: pt,
+          locale: enUS
         }
       );
 
-      setNextWatered(`Regue sua ${plantsStoraged[0].name} daqui a ${nextTime}`);
+      setNextWatered(`Water ${plantsStoraged[0].name} in ${nextTime}`);
       setMyPlants(plantsStoraged);
       setLoading(false);
     }
@@ -66,7 +66,7 @@ export function MyPlants() {
       </View>
 
       <View style={styles.plants}>
-        <Text style={styles.plantsTitle}>Próximas regadas</Text>
+        <Text style={styles.plantsTitle}>Next watering</Text>
         <FlatList
           data={myPlants}
           keyExtractor={(item) => String(item.id)}
@@ -102,6 +102,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    marginTop: 20,
   },
   spotlightImage: {
     width: 60,

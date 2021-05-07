@@ -1,5 +1,5 @@
 export default {
-  heading: 'Jost_600SemiBold',
-  text: 'Jost_400Regular',
-  complement: 'Jost_400Regular',
+  heading: 'PlayfairDisplay_700Bold',
+  text: 'Quicksand_400Regular',
+  complement: 'Quicksand_500Medium',
 };

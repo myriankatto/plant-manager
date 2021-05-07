@@ -78,7 +78,7 @@ export function PlantSelect() {
       setEnvironments([
         {
           key: 'all',
-          title: 'Todos',
+          title: 'All',
         },
         ...data,
       ]);
@@ -98,8 +98,8 @@ export function PlantSelect() {
       <View style={styles.header}>
         <Header />
 
-        <Text style={styles.title}>Em qual ambiente</Text>
-        <Text style={styles.subtitle}>você quer colocar sua planta?</Text>
+        <Text style={styles.title}>First, which room </Text>
+        <Text style={styles.subtitle}>are living your plants?</Text>
       </View>
 
       <View>
@@ -152,7 +152,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 17,
     color: colors.heading,
-    fontFamily: fonts.heading,
+    fontFamily: fonts.complement,
     lineHeight: 20,
     marginTop: 15,
   },

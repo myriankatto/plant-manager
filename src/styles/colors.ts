@@ -1,5 +1,5 @@
 export default {
-  green: '#32B768',
+  green: '#46825A',
   green_dark: '#2B7A4B',
   green_light: '#DAF2E4',
 
@@ -16,4 +16,8 @@ export default {
   blue_light: '#EBF6FF',
 
   red: '#E83F5B',
+
+  yellow_light: '#FFFBF3',
+  yellow: '#FFC850',
+  dark_yellow:'#EB9B45'
 };

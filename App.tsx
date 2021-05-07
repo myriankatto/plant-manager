@@ -2,13 +2,21 @@ import React, { useEffect } from 'react';
 import AppLoading from 'expo-app-loading';
 import * as Notifications from 'expo-notifications';
 import Routes from './src/routes';
-import { useFonts, Jost_400Regular, Jost_600SemiBold } from '@expo-google-fonts/jost';
+import {
+  useFonts,
+  PlayfairDisplay_700Bold,
+  PlayfairDisplay_400Regular,
+} from '@expo-google-fonts/playfair-display';
+import { Quicksand_400Regular, Quicksand_500Medium } from '@expo-google-fonts/quicksand';
+
 import { PlantProps } from './src/libs/storage';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
-    Jost_400Regular,
-    Jost_600SemiBold,
+    PlayfairDisplay_400Regular,
+    PlayfairDisplay_700Bold,
+    Quicksand_500Medium,
+    Quicksand_400Regular,
   });
 
   useEffect(() => {

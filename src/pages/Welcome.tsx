@@ -28,13 +28,13 @@ export function Welcome() {
     <SafeAreaView style={styles.container}>
       <View style={styles.wrapper}>
         <Text style={styles.title}>
-          Gerencie {'\n'}
-          suas plantas de {'\n'}
-          forma fácil
+          Easily manage{'\n'}
+          your plants
         </Text>
         <Image source={wateringImg} style={styles.image} resizeMode="contain" />
         <Text style={styles.subtitle}>
-          Não esqueça mais de regar suas plantas. Nós cuidamos de lembrar você sempre que precisar.
+          Never forget watering your plants again, create alerts and always remember when it needs
+          water.
         </Text>
         <TouchableOpacity style={styles.button} activeOpacity={0.7} onPress={handleStart}>
           <Feather name="chevron-right" style={styles.buttonIcon} />
@@ -55,12 +55,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   title: {
-    fontSize: 28,
+    fontSize: 40,
     textAlign: 'center',
     color: colors.heading,
-    marginTop: 38,
+    marginTop: 90,
     fontFamily: fonts.heading,
-    lineHeight: 34,
+    lineHeight: 42,
   },
   subtitle: {
     textAlign: 'center',

@@ -8,8 +8,10 @@ import {
   TouchableOpacity,
   Platform,
   ScrollView,
+  Button as Btn,
 } from 'react-native';
 
+import { Feather } from '@expo/vector-icons';
 import DateTimePicker, { Event } from '@react-native-community/datetimepicker';
 import { getBottomSpace } from 'react-native-iphone-x-helper';
 import { SvgFromUri } from 'react-native-svg';
@@ -17,6 +19,7 @@ import { useRoute, useNavigation } from '@react-navigation/core';
 import { format, isBefore } from 'date-fns';
 
 import waterDrop from '../assets/waterdrop.png';
+import light from '../assets/light.png';
 import { PlantProps, savePlant } from '../libs/storage';
 import { Button } from '../components/Button';
 import colors from '../styles/colors';
@@ -45,7 +48,7 @@ export function PlantSave() {
 
     if (isBeforeCurrentDate) {
       setSelectedDateTime(currentDate);
-      return Alert.alert('Escolha uma hora no futuro!');
+      return Alert.alert('Choose a time on the future!');
     }
 
     if (dateTime) {
@@ -72,7 +75,7 @@ export function PlantSave() {
         nextScreen: 'MyPlants',
       });
     } catch {
-      Alert.alert('Não foi possível salvar. 😢');
+      Alert.alert('Something went wrong, try again. 😢');
     }
   }
 
@@ -83,16 +86,25 @@ export function PlantSave() {
     >
       <View style={styles.container}>
         <View style={styles.plantInfo}>
+          <TouchableOpacity style={styles.backBtn} onPress={() => navigation.goBack()}>
+            <Feather name="chevron-left" style={styles.buttonIcon} />
+          </TouchableOpacity>
+
           <SvgFromUri uri={plant.photo} height={150} width={150} />
           <Text style={styles.plantName}>{plant.name}</Text>
           <Text style={styles.plantAbout}>{plant.about}</Text>
         </View>
         <View style={styles.controller}>
-          <View style={styles.tipContainer}>
+          <View style={styles.tipWaterContainer}>
             <Image source={waterDrop} style={styles.tipImage} />
-            <Text style={styles.tipText}>{plant.water_tips}</Text>
+            <Text style={styles.tipWaterText}>{plant.water_tips}</Text>
           </View>
-          <Text style={styles.alertLabel}>Escolha o melhor horário para ser lembrado</Text>
+          <View style={styles.tipLightContainer}>
+            <Image source={light} style={styles.tipImage} />
+            <Text style={styles.tipLightText}>{plant.light_tips}</Text>
+          </View>
+
+          <Text style={styles.alertLabel}>Choose the best time to be remembered</Text>
           {showDatePicker && (
             <DateTimePicker
               value={selectedDateTime}
@@ -112,7 +124,7 @@ export function PlantSave() {
               )}`}</Text>
             </TouchableOpacity>
           )}
-          <Button title="Cadastrar Planta" onPress={handleSave} />
+          <Button title="Register Plant" onPress={handleSave} />
         </View>
       </View>
     </ScrollView>
@@ -133,11 +145,13 @@ const styles = StyleSheet.create({
   plantInfo: {
     flex: 1,
     paddingHorizontal: 30,
-    paddingVertical: 50,
+    paddingVertical: 20,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: colors.shape,
   },
+  backBtn: { position: 'absolute', left: 20, top: 40 },
+  buttonIcon: { color: colors.heading, fontSize: 30 },
   controller: {
     flex: 1,
     paddingHorizontal: 20,
@@ -155,10 +169,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontFamily: fonts.text,
     color: colors.heading,
-    fontSize: 17,
+    fontSize: 15,
     marginTop: 10,
   },
-  tipContainer: {
+
+  tipWaterContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -166,15 +181,34 @@ const styles = StyleSheet.create({
     padding: 20,
     borderRadius: 20,
     position: 'relative',
-    bottom: 60,
+    marginBottom: 20,
+  },
+  tipLightContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    backgroundColor: colors.yellow_light,
+    padding: 20,
+    borderRadius: 20,
+    position: 'relative',
+    marginTop: 20,
+    bottom: 20,
   },
   tipImage: { height: 56, width: 56 },
-  tipText: {
+  tipWaterText: {
     flex: 1,
     marginLeft: 20,
     fontFamily: fonts.text,
     color: colors.blue,
-    fontSize: 17,
+    fontSize: 13,
+    textAlign: 'justify',
+  },
+  tipLightText: {
+    flex: 1,
+    marginLeft: 20,
+    fontFamily: fonts.text,
+    color: colors.dark_yellow,
+    fontSize: 13,
     textAlign: 'justify',
   },
   alertLabel: {
